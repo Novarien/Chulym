@@ -16,13 +16,12 @@ body {
 .header-container {
     margin-top: 40px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 15px 40px;
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    padding: 16px 44px;
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     margin-bottom: 40px;
     z-index: 10;
 }
@@ -31,13 +30,13 @@ h1 {
     margin: 0;
     font-size: 2.2rem;
     color: #1a252f;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
 }
 
 .subtitle {
-    margin: 5px 0 0 0;
-    font-size: 1.1rem;
-    opacity: 0.8;
+    margin: 6px 0 0 0;
+    font-size: 1.05rem;
+    opacity: 0.75;
 }
 
 .grid-container {
@@ -49,17 +48,18 @@ h1 {
     padding-bottom: 60px;
 }
 
-
 .card {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(18px) saturate(1.6);
+    -webkit-backdrop-filter: blur(18px) saturate(1.6);
     border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    padding: 25px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.35),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+        0 8px 32px rgba(0, 0, 0, 0.18);
+    padding: 26px;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,28 +67,28 @@ h1 {
     overflow: hidden;
 }
 
-
 .card:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.38);
+    transform: translateY(-4px);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.45),
+        0 12px 40px rgba(0, 0, 0, 0.22);
 }
-
 
 .card.playing {
-    transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 15px 45px rgba(255, 215, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.04);
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.55),
+        0 16px 48px rgba(255, 200, 80, 0.35);
 }
 
-
 .chulym-word {
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 1.75rem;
+    font-weight: normal;
     color: #1e3c50;
-    margin-bottom: 5px;
-    line-height: 1.2;
+    margin-bottom: 4px;
+    line-height: 1.25;
 }
 
 .transcription {
@@ -104,30 +104,27 @@ h1 {
     color: #9a3b26;
 }
 
-
 .audio-icon {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    width: 30px;
-    height: 30px;
-    opacity: 0.5;
+    width: 28px;
+    height: 28px;
+    opacity: 0.45;
     transition: opacity 0.3s;
 }
 
-.card:hover .audio-icon, .card.playing .audio-icon {
+.card:hover .audio-icon,
+.card.playing .audio-icon {
     opacity: 1;
 }
-
 
 @media (max-width: 600px) {
     .header-container {
         width: 85%;
-        padding: 15px;
+        padding: 14px;
         margin-top: 20px;
     }
     h1 { font-size: 1.5rem; }
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
+    .grid-container { grid-template-columns: 1fr; }
 }
