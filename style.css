@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('48728ae03be0874b04f55636eb6a26b43fe7f09d.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Comic Sans MS', 'Nunito', cursive, sans-serif;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-container {
+    margin-top: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+    z-index: 10;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: #1a252f;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+.subtitle {
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    width: 90%;
+    max-width: 1200px;
+    padding-bottom: 60px;
+}
+
+
+.card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+.card.playing {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 15px 45px rgba(255, 215, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+
+.chulym-word {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1e3c50;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.transcription {
+    font-size: 1rem;
+    color: #4a5d6b;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.russian-word {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #9a3b26;
+}
+
+
+.audio-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.card:hover .audio-icon, .card.playing .audio-icon {
+    opacity: 1;
+}
+
+
+@media (max-width: 600px) {
+    .header-container {
+        width: 85%;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    h1 { font-size: 1.5rem; }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
