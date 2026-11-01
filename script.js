@@ -23,21 +23,19 @@ const dictionaryData = [
     { file: "536_звезда.wav", chulym: "чылдыс", tr: "ʨəldə́s", ru: "звезда" },
     { file: "218_зеленый.wav", chulym: "кӧк", tr: "køk", ru: "зелёный" },
     { file: "296_земля.wav", chulym: "чӓр", tr: "ʨɛr", ru: "земля; камень" },
-    { file: "346_знай.wav", chulym: "пӧл ~ пил", tr: "pəl ~ pil", ru: "знать" },
+    { file: "346_знай.wav", chulym: "пӧл", tr: "pəl", ru: "знать" },
     { file: "763_иди.wav", chulym: "пар", tr: "par", ru: "идти" },
     { file: "577_имя.wav", chulym: "ат", tr: "at", ru: "имя" },
     { file: "1127_колено.wav", chulym: "таш-паажа", tr: "taʃ-pá:ʒə", ru: "колено" },
     { file: "1022_кость.wav", chulym: "сӧк", tr: "søk", ru: "кость" },
     { file: "836_красный.wav", chulym: "қызыл", tr: "qəzə́l", ru: "красный" },
-    { file: "188_круглый (но знач. не знает).wav", chulym: "тумақ", tr: "tumáq", ru: "круглый (знач. под вопросом)" },
+    { file: "188_круглый (но знач. не знает).wav", chulym: "тумақ", tr: "tumáq", ru: "круглый" },
     { file: "104_лежи.wav", chulym: "чат", tr: "ʨat", ru: "лежать" },
     { file: "360_лети.wav", chulym: "уч", tr: "utɕ", ru: "лететь, летать" },
-    // Два файла для "маленький"
-    { file: "322_маленький.wav", chulym: "пеличӓк", tr: "pelítɕɛk", ru: "маленький (вариант 1)" },
-    { file: "445_маленький.wav", chulym: "кетӓӓтӓ", tr: "kɛtɛ́:tɛ", ru: "маленький (вариант 2)" },
-    // Два файла для "много"
-    { file: "71_много.wav", chulym: "ӓтӓтӓғ", tr: "ətɛtəʁ", ru: "много (вариант 1)" },
-    { file: "228_много.wav", chulym: "кӧп", tr: "køp", ru: "много (вариант 2)" },
+    { file: "322_маленький.wav", chulym: "кетӓӓтӓ", tr: "kɛtɛ́:tɛ", ru: "маленький (Вар. 1)" },
+    { file: "445_маленький.wav", chulym: "пеличӓк", tr: "pelítɕɛk", ru: "маленький (Вар. 2)" },
+    { file: "71_много.wav", chulym: "ӓтӓтӓғ", tr: "ətɛtəʁ", ru: "много (Вар. 1)" },
+    { file: "228_много.wav", chulym: "кӧп", tr: "køp", ru: "много (Вар. 2)" },
     { file: "366_мой.wav", chulym: "мең", tr: "meŋ", ru: "мой" },
     { file: "462_мы.wav", chulym: "пӓс", tr: "pəs", ru: "мы" },
     { file: "344_мясо.wav", chulym: "эт", tr: "ɛt", ru: "мясо" },
@@ -60,7 +58,7 @@ const gridContainer = document.getElementById('dictionary-grid');
 dictionaryData.forEach(item => {
     const card = document.createElement('div');
     card.className = 'card';
-    
+
     const icon = `<svg class="audio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>`;
 
     card.innerHTML = `
